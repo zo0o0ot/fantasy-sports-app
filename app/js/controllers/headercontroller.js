@@ -13,5 +13,17 @@ angular.module('fantasyApp.controllers.header', ['fantasyApp.services.login'])
       };
 
       $scope.navbarEntries = [
+          {
+              'title': 'NFL Teams',
+              'link': '/nflteams'
+          }
       ];
+
+      $scope.$on('$routeChangeSuccess', function() {
+          $scope.navbarEntries.forEach(
+              function(data) {
+                  data.isActive = ($location.path().indexOf(data.link) == 0);
+              }
+          )
+      });
     }])
