@@ -1,4 +1,5 @@
-fantasy-football-app by ReshadN
+fantasy-sports-app by ReshadN
 ===========================
 
-This app is based on the thinkster.io Fantasy Football Firebase AngularJS tutorial
+Built with AngularJS, Firebase and AngularFire.
+Based on the awesome thinkster.io Firebase AngularJS tutorial.
