@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('fantasyApp.controllers.leagues', ['fantasyApp.services.leagues'])
-  .controller('LeaguesController', ['$scope', '$routeParams', '$location', 'angularFire', 'Leagues',
+  .controller('LeaguesCtrl', ['$scope', '$routeParams', '$location', 'angularFire', 'Leagues',
     function($scope, $routeParams, $location, angularFire, Leagues) {
       angular.extend($scope, {
         league: {},

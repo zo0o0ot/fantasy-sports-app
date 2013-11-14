@@ -1,0 +1,33 @@
+<div ng-controller="FantasyTeamsCtrl" ng-init="findOneFantasyTeam();findLeagues()">
+    <form class="form-horizontal">
+        <div class="control-group">
+            <label class="control-label" for="name">Name</label>
+            <div class="controls">
+                <input type="text" ng-model="fantasyTeam.name" id="name" placeholder="Name"/>
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="league">League</label>
+            <div class="controls">
+                <select
+                    ng-model="fantasyTeam.leagueId"
+                    name="league"
+                    required="required"
+                    ng-options="c.$id as c.name for c in leagues">
+                      <option data-ng-show="noFantasyTeam" value="">Choose a league:</option>
+                </select>
+            </div>
+        </div>
+        <div class="control-group">
+            <div class="controls">
+                <button ng-click="create()" ng-show="!noFantasyTeam">Create Fantasy Team</button>
+            </div>
+        </div>
+        <div class="control-group">
+            <div class="controls">
+                <a href="#/fantasyteams">View all Fantasy Teams</a>
+            </div>
+        </div>
+    </form>
+    <p ng-show="err" class="error">{{ err }}</p>
+</div>
