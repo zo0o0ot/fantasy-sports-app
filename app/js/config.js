@@ -33,6 +33,6 @@ app.config(['$routeProvider',
 
   // your Firebase URL goes here
   // should look something like: https://blahblahblah.firebaseio.com
-  .constant('FBURL', 'https://fantasy-sports.firebaseio.com')
+  .constant('FBURL', 'https://blazing-inferno-6661.firebaseio.com')
 
 
